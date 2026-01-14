@@ -1,0 +1,12 @@
+# build artifacts
+build/
+*.o
+*.d
+battleship
+
+# macOS
+.DS_Store
+
+# editors
+.vscode/
+.idea/
