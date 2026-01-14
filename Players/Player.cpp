@@ -47,6 +47,11 @@ void Player::displayTrackingGrid(){
     trackingBoard.printGrid();
 }
 
+void Player::displayShipsBoard(){
+    cout << this->getName() << "'s Ships Board" << endl;
+    trackingBoard.printGrid();
+}
+
 Grid& Player::getGrid() {
     return grid;
 }

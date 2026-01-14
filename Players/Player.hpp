@@ -21,8 +21,9 @@ public:
     
     virtual void placeAllShips() = 0;
     virtual void makeMove(Player* opponent) = 0;
-    void displayTrackingGrid();
     void registerHitAt(int row, int col);
+    void displayTrackingGrid();
+    void displayShipsBoard();
 
     Grid& getGrid();
     const Grid& getGrid() const;

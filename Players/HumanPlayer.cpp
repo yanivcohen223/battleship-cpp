@@ -126,9 +126,6 @@ void HumanPlayer::makeMove(Player* opponent) {
             break;
         }
     }
-    cout << this->getName() << "'s Tracking Board" << endl;
-    trackingBoard.printGrid();
-
 }
 
 void HumanPlayer::removeAvailableAt(int pos) {

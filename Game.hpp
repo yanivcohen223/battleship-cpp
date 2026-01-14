@@ -14,5 +14,8 @@ public:
     void start();
     bool isGameOver() const;
 
+    //Showing where the ships were located.
+    void displayShipsBoard(Player* p1, Player* p2);
+
 };
 
