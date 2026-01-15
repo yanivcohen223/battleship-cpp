@@ -87,19 +87,19 @@ void HumanPlayer::placeAllShips() {
 
 void HumanPlayer::makeMove(Player* opponent) {
     Grid& enemyGrid = opponent->getGrid();
-    cout << this->getName() << "'s Tracking Board" << endl;
+    cout << "\n" << this->getName() << "'s Tracking Board" << endl;
     trackingBoard.printGrid();
     int row, col;
     while(true){
 
         if (!getCoordinates(row, col) ){
-            cout << "Invalid coordinates. Try again.\n";
+            cout << "\nInvalid coordinates. Try again.\n";
             continue;
         }
         row--;col--;
         
         if (!enemyGrid.isInside(row, col)) {
-            cout << "Coordinates out of range. Try again.\n";
+            cout << "\nCoordinates out of range. Try again.\n";
             continue;
         }
 
@@ -107,7 +107,7 @@ void HumanPlayer::makeMove(Player* opponent) {
         char playerTile = trackingBoard.getCell(row, col);
 
         if (playerTile == trackingBoard.getHitMark() || playerTile == trackingBoard.getMissMark()){
-            cout << "This tile already discovered \n";
+            cout << "\nThis tile already discovered \n";
             continue;
         }
         
@@ -115,14 +115,14 @@ void HumanPlayer::makeMove(Player* opponent) {
             opponent->registerHitAt(row, col);
             trackingBoard.markTrackingHit(row, col);
             enemyGrid.markHit(row, col);
-            cout << this->getName() << " HITS!! \n";
+            cout << "\n" << this->getName() << " HITS!! \n";
             break;
             
         }
         else if (enemyTile == enemyGrid.getEmptyMark()) {
             trackingBoard.markMiss(row, col);
             enemyGrid.markMiss(row, col);
-            cout << this->getName() << " MISS!! \n";
+            cout << "\n" << this->getName() << " MISS!! \n";
             break;
         }
     }

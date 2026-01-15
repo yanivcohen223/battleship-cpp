@@ -54,14 +54,14 @@ void AiPlayer::makeMove(Player* opponent) {
             opponent->registerHitAt(row, col);
             trackingBoard.markTrackingHit(row, col);
             enemyGrid.markHit(row, col);
-            cout << "AI hit!\n";
+            cout << "\nAI hit!\n";
             break;
             
         }
         else if (enemyTile == enemyGrid.getEmptyMark()) {
             trackingBoard.markMiss(row, col);
             enemyGrid.markMiss(row, col);
-            cout << "AI miss.\n";
+            cout << "\nAI miss.\n";
             break;
         }
     }
