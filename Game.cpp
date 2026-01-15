@@ -41,7 +41,7 @@ bool Game::isGameOver() const {
 }
 
 //p1 winner 
-void displayWinningState(Player* p1, Player* p2){
+void Game::displayWinningState(Player* p1, Player* p2){
 
         cout << "\n***** " << p1->getName() << " won the game! ******\n";
         p1->displayTrackingGrid();

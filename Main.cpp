@@ -1,4 +1,5 @@
 //WROTE BY YANIV COHEN && ROEE BURD
+// Git URL: https://github.com/yanivcohen223/battleship-cpp
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -14,7 +15,7 @@ int main(int argc, char const *argv[]){
     bool playAgain = true;
 
     while (playAgain){
-        HumanPlayer* player1 = new HumanPlayer("Player");
+        HumanPlayer* player1 = new HumanPlayer("Human");
         AiPlayer* player2 = new AiPlayer();
 
         Game* game = new Game(player1, player2);
